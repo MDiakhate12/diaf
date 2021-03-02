@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT
+
+console.log(`PORT=${process.env.PORT}`)
+console.log(`DB_URI=${process.env.DB_URI}`)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
